@@ -1,0 +1,132 @@
+{"properties": [
+  {
+    "name": "server.spring",
+    "type": "java.lang.String",
+    "description": "A description for 'server.spring'"
+  },
+  {
+    "name": "server.client",
+    "type": "java.lang.String",
+    "description": "A description for 'server.client'"
+  },
+  {
+    "name": "server.eureka",
+    "type": "java.lang.String",
+    "description": "A description for 'server.eureka'"
+  },
+  {
+    "name": "server.service-uri",
+    "type": "java.lang.String",
+    "description": "A description for 'server.service-uri'"
+  },
+  {
+    "name": "server.application",
+    "type": "java.lang.String",
+    "description": "A description for 'server.application'"
+  },
+  {
+    "name": "server.name",
+    "type": "java.lang.String",
+    "description": "A description for 'server.name'"
+  },
+  {
+    "name": "cloud",
+    "type": "java.lang.String",
+    "description": "A description for 'cloud'"
+  },
+  {
+    "name": "server.cloud.gateway.routes",
+    "type": "java.lang.String",
+    "description": "A description for 'server.cloud.gateway.routes'"
+  },
+  {
+    "name": "server.service-url",
+    "type": "java.lang.String",
+    "description": "A description for 'server.service-url'"
+  },
+  {
+    "name": "server.defaultZone",
+    "type": "java.lang.String",
+    "description": "A description for 'server.defaultZone'"
+  },
+  {
+    "name": "spring.application.cloud.gateway.routes",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.application.cloud.gateway.routes'"
+  },
+  {
+    "name": " server",
+    "type": "java.lang.String",
+    "description": "A description for ' server'"
+  },
+  {
+    "name": " port",
+    "type": "java.lang.String",
+    "description": "A description for ' port'"
+  },
+  {
+    "name": " eureka",
+    "type": "java.lang.String",
+    "description": "A description for ' eureka'"
+  },
+  {
+    "name": "    spring",
+    "type": "java.lang.String",
+    "description": "A description for '    spring'"
+  },
+  {
+    "name": "     defaultZone",
+    "type": "java.lang.String",
+    "description": "A description for '     defaultZone'"
+  },
+  {
+    "name": "   client",
+    "type": "java.lang.String",
+    "description": "A description for '   client'"
+  },
+  {
+    "name": "    service-url",
+    "type": "java.lang.String",
+    "description": "A description for '    service-url'"
+  },
+  {
+    "name": "    application",
+    "type": "java.lang.String",
+    "description": "A description for '    application'"
+  },
+  {
+    "name": "    name",
+    "type": "java.lang.String",
+    "description": "A description for '    name'"
+  },
+  {
+    "name": "    cloud",
+    "type": "java.lang.String",
+    "description": "A description for '    cloud'"
+  },
+  {
+    "name": "    gateway",
+    "type": "java.lang.String",
+    "description": "A description for '    gateway'"
+  },
+  {
+    "name": "    routes",
+    "type": "java.lang.String",
+    "description": "A description for '    routes'"
+  },
+  {
+    "name": "    - id",
+    "type": "java.lang.String",
+    "description": "A description for '    - id'"
+  },
+  {
+    "name": "    uri",
+    "type": "java.lang.String",
+    "description": "A description for '    uri'"
+  },
+  {
+    "name": "    predicates",
+    "type": "java.lang.String",
+    "description": "A description for '    predicates'"
+  }
+]}
