@@ -5,11 +5,12 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
+//handles exception globally
 @ControllerAdvice
 public class GlobalExceptionHandler {
 	@Value(value="${data.exception.msg}")
 	private String msg;
-	
+	//handle runtime exceptions
 	@ExceptionHandler(value = AlbumsAlreadyExistsException.class)
 	public ResponseEntity<String> AlbumsAlreadyExistsException(AlbumsAlreadyExistsException aap){
 	        return new ResponseEntity<String>(msg, HttpStatus.CONFLICT);
