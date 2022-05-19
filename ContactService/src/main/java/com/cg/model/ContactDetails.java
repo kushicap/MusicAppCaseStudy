@@ -11,7 +11,7 @@ import lombok.Data;
 @Document(collection = "Contacts Details")
 //POJO Class
 public class ContactDetails {
-	  @Id
+	  @Id//primary key
 	   private String id;   
 	   private String name;   
 	   private String email;
