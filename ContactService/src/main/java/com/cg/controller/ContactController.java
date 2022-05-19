@@ -15,34 +15,38 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.cg.model.ContactDetails;
 import com.cg.repository.ContactRepository;
-
+//controlls all REST API's
 @RestController
+//Maps HTTP requests to handler methods of mvc
 @RequestMapping("/api/v1")
 public class ContactController {
 	@Autowired
 	private ContactRepository contactrepository;
-	
+	//to add contact details of admin
 	@PostMapping("/addContact")
 	public String saveBook(@RequestBody ContactDetails contact) {
     contactrepository.save(contact);
 	return "Added contact with id :  " + contact.getId();
 }
-	
+	// to get details of admin
 	@GetMapping("/findAllContacts")
 	public List<ContactDetails> getContacts(){
 		return contactrepository.findAll();
 		
 	}
+	// to get details of admin contactby id
 	@GetMapping("/findAllContacts/{id}")
 	public Optional<ContactDetails> getContactDetails(@PathVariable String id){
 		return contactrepository.findById(id);
 	}
+	// to update details of Admincontact
 	@PutMapping("/update/{id}")
     public ContactDetails updateContactDetails(@PathVariable("id") String id,@RequestBody ContactDetails contact ) {
         contact.setId(id);
         contactrepository.save(contact);
         return contact;
 	}
+	// to delete details of contact
 	 @DeleteMapping("/delcontact/{id}")
 		public String deleteContactDetails (@PathVariable String id) {
 			contactrepository.deleteById(id);
