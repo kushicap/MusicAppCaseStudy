@@ -16,12 +16,13 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
  
 @SpringBootTest
+//It tells JUnit to run using Spring's testing support
 @RunWith(SpringRunner.class)
 
 class ContactServiceApplicationTests {
 	@Autowired
-    private ContactService contactService;
-
+    private ContactService contactService;// calls contactservice
+//It makes test code &verification error easier
     @MockBean
     private ContactRepository conatctRepository;
  
