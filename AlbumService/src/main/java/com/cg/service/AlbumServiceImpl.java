@@ -16,8 +16,9 @@ import com.cg.exception.DeletedAlreadyException;
 import com.cg.model.Album;
 import com.cg.repository.AlbumRepository;
 
-
+//It provide some bussiness logics
 @Service
+//It implements albumservice
 public class AlbumServiceImpl implements AlbumService {
 	private AlbumRepository albumRepo;
 	@Autowired
@@ -28,6 +29,7 @@ public class AlbumServiceImpl implements AlbumService {
 		this.albumRepo = albumRepo;
 	}
 	@Override
+	// post album details
 	public Album addAlbum(Album album) throws AlbumsAlreadyExistsException {
 		// TODO Auto-generated method stub
 		if(albumRepo.existsById(album.getId())) {
@@ -37,6 +39,7 @@ public class AlbumServiceImpl implements AlbumService {
 		return savedalbum;
 	}
 	@Override
+	//get details of albums
     public List<Album> getAllAlbum() {
         List<Album> album = albumrepository.findAll();
         System.out.println("Getting data from DB : " + album);
@@ -44,6 +47,7 @@ public class AlbumServiceImpl implements AlbumService {
     }
 
     @Override
+	//it delete albums by id
 	public void deleteAlbumByid(String id) throws DeletedAlreadyException{
 		// TODO Auto-generated method stub
 		Optional<Album>albumDB=this.albumRepo.findById(id);		
