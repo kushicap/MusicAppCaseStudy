@@ -12,11 +12,11 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 
 
-
+//it checks for a main configuration class
 @SpringBootTest
 public class PlayListTest {
 	private PlayList p;
-
+//It execute before current method in each test case
 	@BeforeEach
 	public void preConfig() {
 
