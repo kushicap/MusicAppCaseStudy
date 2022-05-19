@@ -12,7 +12,8 @@ import com.cg.exception.SongsAlreadyExistsException;
 import com.cg.model.Songs;
 import com.cg.repository.SongRepository;
 
-@Service
+@Service //It provide some bussiness logics
+//Implements songsservice layer
 public class SongsServiceImpl implements SongsService {
 	private SongRepository songRepo;
 	@Autowired
