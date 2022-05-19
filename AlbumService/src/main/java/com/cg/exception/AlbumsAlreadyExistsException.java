@@ -6,7 +6,7 @@ public class AlbumsAlreadyExistsException extends Exception {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-
+//parameterized constuctor
 	public AlbumsAlreadyExistsException() {
 		super();
 		// TODO Auto-generated constructor stub
