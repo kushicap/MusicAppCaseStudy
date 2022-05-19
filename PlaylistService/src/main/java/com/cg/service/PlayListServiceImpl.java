@@ -11,7 +11,9 @@ import com.cg.exception.DeletedAlreadyExistsException;
 import com.cg.exception.PlayListsAlreadyExistsException;
 import com.cg.model.PlayList;
 import com.cg.repository.PlayListRepository;
+//It provide some bussiness logics
 @Service
+//Implements playlist service
 public class PlayListServiceImpl implements PlayListService {
 	
 	private PlayListRepository playlistRepo;
@@ -23,7 +25,7 @@ public class PlayListServiceImpl implements PlayListService {
 		this.playlistRepo = playlistRepo;
 	}
 
-
+//add playlist details
 	@Override
 	public PlayList addPlayList (PlayList playlist) throws PlayListsAlreadyExistsException {
 		if(playlistRepo.existsById(playlist.getId())) {
@@ -32,13 +34,14 @@ public class PlayListServiceImpl implements PlayListService {
 		PlayList savedPlayList = playlistRepo.save(playlist);
 		return savedPlayList;
 	}
+	//get details of playlist songs
 	@Override
     public List<PlayList> getAllPlayList() {
         List<PlayList> playlist = playlistrepository.findAll();
         System.out.println("Getting data from DB : " + playlist);
         return playlist;
     }
-
+//delete playlist songs with id
     @Override
 	public void deletePlayListByid(String id) throws DeletedAlreadyExistsException {
 		// TODO Auto-generated method stub
