@@ -22,9 +22,9 @@ import com.cg.utils.JwtUtils;
 @Service//It provide some bussiness logic
 public class JwtFilterRequest extends OncePerRequestFilter {
 	@Autowired
-	private JwtUtils jwtutils;
+	private JwtUtils jwtutils;// it injects the jwtutil details
 	 @Autowired
-	    private UserService userService;
+	    private UserService userService;// it injects userservice layer
 
 
 	@Override
