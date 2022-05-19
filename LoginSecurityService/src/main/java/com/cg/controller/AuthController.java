@@ -17,7 +17,7 @@ import com.cg.model.UserModel;
 import com.cg.repository.UserRepository;
 import com.cg.service.UserService;
 import com.cg.utils.JwtUtils;
-
+//controlls all REST API's
 @RestController
 public class AuthController {
 	
@@ -55,7 +55,7 @@ public class AuthController {
 		
 	}
 	
-
+//to add details for login 
 	@PostMapping("/login")
 	private ResponseEntity<?> authenticationClient(@RequestBody AutenticationRequest authenticationRequest){
 		String username = authenticationRequest.getUsername();
