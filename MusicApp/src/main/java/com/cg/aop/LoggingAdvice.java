@@ -11,6 +11,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class LoggingAdvice {
 	Logger log =  LoggerFactory.getLogger(LoggingAdvice.class);
+	//It marches the join point
 	@Pointcut(value="execution(* com.cg.*.*.*(..) )")
 	public void mypointcut() {
 		
