@@ -5,13 +5,13 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
-
+//handles exception globally
 @ControllerAdvice
 
 public class GlobalExceptionHandler {
 	@Value(value="${data.exception.msg}")
 	private String msg;
-	
+	//To handle Exceptions
 	@ExceptionHandler(value = PlayListsAlreadyExistsException.class)
 	public ResponseEntity<String>PlayListsAlreadyExistsException(PlayListsAlreadyExistsException dap){
 	        return new ResponseEntity<String>(msg, HttpStatus.CONFLICT);
