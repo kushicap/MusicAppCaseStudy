@@ -21,12 +21,13 @@ import com.cg.model.Album;
 import com.cg.service.AlbumService;
 
 
-
+//controlls all REST API's
 @RestController
+//Maps HTTP requests to handler methods of mvc
 @RequestMapping("/api/v1")
 public class AlbumController {
 	private AlbumService albumServ;
-
+//it is used to autowire one bean into another bean
 	@Autowired
 	public AlbumController(AlbumService albumServ) {
 			this.albumServ = albumServ;
@@ -37,13 +38,13 @@ public class AlbumController {
         Album savedalbum = albumServ.addAlbum(album);
         return new ResponseEntity<>(savedalbum, HttpStatus.CREATED);
     }
-    
+    //To get details
     @GetMapping("/findallalbums")
     public ResponseEntity<List<Album>> getAllAlbum(){
         return new ResponseEntity<List<Album>>((List<Album>)albumServ.getAllAlbum(),HttpStatus.OK);
     }
 
-    
+    //delete the album by id
      @DeleteMapping("/delalbum/{id}")
         public ResponseEntity<Void> deleteAlbumById(@PathVariable String id) throws DeletedAlreadyException {
             albumServ.deleteAlbumByid(id);
