@@ -23,6 +23,7 @@ public class SongsServiceImpl implements SongsService {
 		this.songRepo = songRepo;
 	}
 	@Override
+	//add songs
 	public Songs addSongs(Songs song) throws SongsAlreadyExistsException {
 		// TODO Auto-generated method stub
 		if(songRepo.existsById(song.getSongId())) {
@@ -32,12 +33,14 @@ public class SongsServiceImpl implements SongsService {
 		return savedSong;
 	}
 	@Override
+	//get all songs
 	public List<Songs> getAllSongs() {
 		// TODO Auto-generated method stub
 		return (List<Songs>) songRepo.findAll();
 	}
 	
 	@Override
+	//Delete Songs by Id
 	public void deleteSongsBySongId(int SongId) throws SongAlreadyDeletedException {
 		// TODO Auto-generated method stub
 		Optional<Songs>songDB=this.songRepo.findById(SongId);		
