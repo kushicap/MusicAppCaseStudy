@@ -37,7 +37,7 @@ public class JwtUtils {
         private Claims extractAllClaims(String token) {
             return Jwts.parser().setSigningKey(SECRET_KEY).parseClaimsJws(token).getBody();
         }
-
+//To get username
         public String extractUsername(String token) {
             return extractClaim(token , Claims::getSubject);
 
@@ -47,7 +47,7 @@ public class JwtUtils {
             return extractClaim(token , Claims::getExpiration);
 
         }
-//if token is token is expired
+//if token is expired
         private Boolean isTokenExpired(String token) {
             return extractExpiration(token).before(new Date());
 
