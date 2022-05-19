@@ -13,6 +13,7 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 
 import com.cg.service.JwtFilterRequest;
 import com.cg.service.UserService;
+//it automatically apply the class to the global WebSecurity
 @EnableWebSecurity
 public class SecurityConfig extends WebSecurityConfigurerAdapter{
 	 @Autowired
@@ -32,6 +33,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 		.permitAll().anyRequest().authenticated().and().sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
 		http.addFilterBefore(jwtFilterRequest, UsernamePasswordAuthenticationFilter.class);
 	}
+	//It marks methods that create  a bean
 	 @Bean
 	 public PasswordEncoder passwordEncoder() {
 		 return NoOpPasswordEncoder.getInstance();
