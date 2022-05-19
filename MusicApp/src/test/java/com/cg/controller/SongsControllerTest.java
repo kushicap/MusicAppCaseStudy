@@ -34,8 +34,9 @@ public class SongsControllerTest {
 	private SongsService Ss;
 	private Songs s;
 	private List<Songs> songlist;
-	@InjectMocks
+	@InjectMocks // It checks Where the injection is performed
 	private SongController sc;
+	//It execute before current method in each test case
 	@BeforeEach
 	public void setUp() {
 	s = new Songs(1,"Cheap Thrills","Sia",2016);
@@ -57,6 +58,7 @@ public class SongsControllerTest {
 
 
 	@Test
+	//To get all song details
 	public void getAllSongsControllerTest() throws Exception {
 	when(Ss.getAllSongs()).thenReturn(songlist);
 	mocMvc.perform(MockMvcRequestBuilders.get("/api/v1/song")
