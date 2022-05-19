@@ -19,7 +19,9 @@ import com.cg.exception.DeletedAlreadyExistsException;
 import com.cg.exception.PlayListsAlreadyExistsException;
 import com.cg.model.PlayList;
 import com.cg.service.PlayListService;
+//controlls all REST API's
 @RestController
+//Maps HTTP requests to handler methods of mvc
 @RequestMapping("/api/v1")
 public class PlaylistController {
 	private PlayListService playlistServ;
