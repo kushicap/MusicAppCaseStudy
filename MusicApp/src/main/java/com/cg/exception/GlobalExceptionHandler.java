@@ -8,12 +8,12 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 
 
 
-@ControllerAdvice
+@ControllerAdvice //handles exception globally
 
 public class GlobalExceptionHandler {
 	@Value(value="${data.exception.msg}")
 	private String msg;
-	
+	//handle runtime exceptions
 	@ExceptionHandler(value = SongsAlreadyExistsException.class)
 	public ResponseEntity<String>SongsAlreadyExistsException(SongsAlreadyExistsException dap){
 	        return new ResponseEntity<String>(msg, HttpStatus.CONFLICT);
