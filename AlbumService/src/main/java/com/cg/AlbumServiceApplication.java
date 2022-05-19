@@ -5,6 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 //it makes your Spring Boot application act as a Eureka client
 @EnableEurekaClient
+//starting point of Spring Application
 @SpringBootApplication
 public class AlbumServiceApplication {
 
