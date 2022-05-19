@@ -19,8 +19,8 @@ import com.cg.exception.SongsAlreadyExistsException;
 import com.cg.model.Songs;
 import com.cg.service.SongsService;
 
-@RestController
-@RequestMapping("/api/v1")
+@RestController //controlls all REST API's
+@RequestMapping("/api/v1") //Maps HTTP requests to handler methods of mvc
 public class SongController {
 	private SongsService songServ;
 
